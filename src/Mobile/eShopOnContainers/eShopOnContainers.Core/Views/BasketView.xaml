@@ -107,7 +107,7 @@
                                     Style="{StaticResource CartTotalStyle}"/>
                                 <Label 
                                     Grid.Row="1"                   
-                                    Text="{Binding Total, StringFormat='${0:N}'}"
+                                    Text="{Binding Total, Converter={StaticResource IndianCurrencyConverter}}"
                                     TextColor="{StaticResource GreenColor}"
                                     Style="{StaticResource CartTotalStyle}"/>
                             </StackLayout>

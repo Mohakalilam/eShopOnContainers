@@ -117,18 +117,18 @@
                     <!-- PRICE -->
                     <Label 
                         Grid.Column="0"
-                        Text="{Binding UnitPrice, StringFormat='${0:N}'}"
+                        Text="{Binding UnitPrice, Converter={StaticResource IndianCurrencyConverter}}"
                         Style="{StaticResource OrderItemUnitPriceStyle}"/>
                     <!-- QUANTITY -->
                     <Label    
                         Grid.Column="1"
                         Text="{Binding Quantity}"
-                        Style="{StaticResource QuantityStyle}"/>
+                        Style="{StaticResource QuantityStyle}"/> 
                 </Grid>
                 <!-- TOTAL -->
                 <Label
                     Grid.Row="2"
-                    Text="{Binding Total, StringFormat='${0:N}'}"
+                    Text="{Binding Total, Converter={StaticResource IndianCurrencyConverter}}"
                     Style="{StaticResource OrderTotalStyle}"/>
             </Grid>
             <Grid
@@ -143,7 +143,7 @@
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"
                     HeightRequest="60"
-                    Text="{Binding OldUnitPrice, StringFormat='Note that the price of this article changed in our Catalog. The old price when you originally added it to the basket was $ {0:N2}'}" />
+                    Text="{Binding OldUnitPrice, StringFormat='Note that the price of this article changed in our Catalog. The old price when you originally added it to the basket was \u20B9 {0:N2}'}" />
             </Grid>
             <Grid 
                 Grid.Column="0"

@@ -160,7 +160,7 @@
                         Text="TOTAL"
                         Style="{StaticResource OrderTitleStyle}"/>
                         <Label 
-                        Text="{Binding Order.Total, StringFormat='${0:N}', Converter={StaticResource ToUpperConverter}}" 
+                        Text="{Binding Order.Total, Converter={StaticResource IndianCurrencyConverter}}" 
                         Style="{StaticResource OrderContentStyle}"/>
                     </StackLayout>
                     <StackLayout
@@ -249,7 +249,7 @@
                         Style="{StaticResource OrderTotalStyle}"/>
                     <Label 
                         Grid.Row="1"                   
-                        Text="{Binding Order.Total, StringFormat='${0:N}'}"
+                        Text="{Binding Order.Total, Converter={StaticResource IndianCurrencyConverter}}"
                         TextColor="{StaticResource GreenColor}"
                         Style="{StaticResource OrderTotalStyle}"/>
                 </StackLayout>
